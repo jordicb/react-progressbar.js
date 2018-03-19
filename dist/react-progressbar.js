@@ -1,3 +1,5 @@
+var createReactClass = require('create-react-class');
+
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', 'react', 'react-dom', 'lodash.isequal', 'progressbar.js'], factory);
@@ -27,7 +29,7 @@
         return target;
     };
 
-    var Shape = React.createClass({
+    var Shape = createReactClass({
         displayName: 'Shape',
 
         getDefaultProps: function getDefaultProps() {
@@ -119,21 +121,21 @@
         }
     });
 
-    var Line = React.createClass({
+    var Line = createReactClass({
         displayName: 'Line',
         render: function render() {
             return React.createElement(Shape, _extends({}, this.props, { ShapeClass: ProgressBar.Line }));
         }
     });
 
-    var Circle = React.createClass({
+    var Circle = createReactClass({
         displayName: 'Circle',
         render: function render() {
             return React.createElement(Shape, _extends({}, this.props, { ShapeClass: ProgressBar.Circle }));
         }
     });
 
-    var SemiCircle = React.createClass({
+    var SemiCircle = createReactClass({
         displayName: 'SemiCircle',
         render: function render() {
             return React.createElement(Shape, _extends({}, this.props, { ShapeClass: ProgressBar.SemiCircle }));
